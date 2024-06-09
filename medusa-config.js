@@ -90,6 +90,7 @@ const plugins = [
       api_key: process.env.STRIPE_API_KEY,
       capture: true,
       automatic_payment_methods: true,
+      payment_description: "This is for international payments",
       // webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
     },
   },
