@@ -42,17 +42,17 @@ const plugins = [
       upload_dir: "uploads",
     },
   },
-  // {
-  //   resolve: "@medusajs/admin",
-  //   /** @type {import('@medusajs/admin').PluginOptions} */
-  //   options: {
-  //     autoRebuild: true,
-  //     develop: {
-  //       open: process.env.OPEN_BROWSER !== "false",
-  //     },
-  //     enableUI: true,
-  //   },
-  // },
+  {
+    resolve: "@medusajs/admin",
+    /** @type {import('@medusajs/admin').PluginOptions} */
+    options: {
+      autoRebuild: true,
+      develop: {
+        open: process.env.OPEN_BROWSER !== "false",
+      },
+      enableUI: true,
+    },
+  },
   {
     resolve: `medusa-plugin-algolia`,
     options: {
@@ -117,14 +117,14 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
-  database_extra:
-    process.env.NODE_ENV !== "development"
-      ? {
-          ssl: {
-            rejectUnauthorized: false,
-          },
-        }
-      : {},
+  // database_extra:
+  //   process.env.NODE_ENV !== "development"
+  //     ? {
+  //         ssl: {
+  //           rejectUnauthorized: false,
+  //         },
+  //       }
+  //     : {},
   // Uncomment the following lines to enable REDIS
   // redis_url: REDIS_URL
 };
